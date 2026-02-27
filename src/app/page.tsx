@@ -107,17 +107,7 @@ export default async function HomePage() {
 
       {/* Hero Section — Looping video with image fallback */}
       <section className="relative bg-dark text-white overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/hero-drone-estate.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/master_1.mp4" type="video/mp4" />
-        </video>
-        {/* Fallback image for browsers without video support */}
+        {/* Fallback image — behind the video */}
         <Image
           src="/images/hero-drone-estate.jpg"
           alt="Stunning aerial view of a premium landscape renovation in Austin, Texas"
@@ -126,8 +116,20 @@ export default async function HomePage() {
           priority
           quality={80}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/75 to-dark/60" />
-        <div className="relative container-narrow section-padding pt-28 md:pt-32 lg:pt-36">
+        {/* Video background — sits on top of the fallback image */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="/images/hero-drone-estate.jpg"
+          className="absolute inset-0 w-full h-full object-cover z-[1]"
+        >
+          <source src="/videos/master_1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/75 to-dark/60 z-[2]" />
+        <div className="relative z-[3] container-narrow section-padding pt-28 md:pt-32 lg:pt-36">
           <p className="text-primary-light font-body font-bold text-sm uppercase tracking-widest mb-4">
             Design &bull; Landscape &bull; Maintain
           </p>
