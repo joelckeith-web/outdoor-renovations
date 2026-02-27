@@ -107,7 +107,6 @@ export default async function HomePage() {
 
       {/* Hero Section — Looping video with image fallback */}
       <section className="relative bg-dark text-white overflow-hidden">
-        {/* Video background — drop hero-loop.mp4 into public/videos/ */}
         <video
           autoPlay
           loop
@@ -116,7 +115,7 @@ export default async function HomePage() {
           poster="/images/hero-drone-estate.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/hero-loop.mp4" type="video/mp4" />
+          <source src="/videos/master_1.mp4" type="video/mp4" />
         </video>
         {/* Fallback image for browsers without video support */}
         <Image
