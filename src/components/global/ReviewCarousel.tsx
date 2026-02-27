@@ -256,7 +256,7 @@ export function ReviewCarousel({ reviews: reviewsProp }: ReviewCarouselProps) {
                     &ldquo;{review.text}&rdquo;
                   </p>
                   <div className="mt-5 pt-4 border-t border-gray-100">
-                    <p className="font-heading font-bold text-sm text-dark">
+                    <p className="font-body font-bold text-sm text-dark">
                       {review.name}
                     </p>
                     <p className="text-muted font-body text-xs mt-0.5">

@@ -21,7 +21,7 @@ const config: Config = {
       },
       fontFamily: {
         heading: ["var(--font-playfair)", "serif"],
-        body: ["var(--font-montserrat)", "sans-serif"],
+        body: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },

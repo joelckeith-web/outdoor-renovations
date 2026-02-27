@@ -105,8 +105,20 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero Section */}
+      {/* Hero Section — Looping video with image fallback */}
       <section className="relative bg-dark text-white overflow-hidden">
+        {/* Video background — drop hero-loop.mp4 into public/videos/ */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/images/hero-drone-estate.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-loop.mp4" type="video/mp4" />
+        </video>
+        {/* Fallback image for browsers without video support */}
         <Image
           src="/images/hero-drone-estate.jpg"
           alt="Stunning aerial view of a premium landscape renovation in Austin, Texas"
@@ -171,7 +183,7 @@ export default async function HomePage() {
             ].map((item) => (
               <div key={item.stat} className="flex flex-col items-center">
                 <item.icon className="w-8 h-8 text-primary mb-2" />
-                <p className="font-heading font-extrabold text-dark text-lg">{item.stat}</p>
+                <p className="font-body font-extrabold text-dark text-lg">{item.stat}</p>
                 <p className="text-muted text-sm font-body">{item.label}</p>
               </div>
             ))}
@@ -204,7 +216,7 @@ export default async function HomePage() {
               <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                 About Outdoor Renovations
               </p>
-              <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-6">
+              <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-6">
                 Built on Craftsmanship. Driven by Vision.
               </h2>
               <p className="text-muted font-body mb-4">
@@ -234,7 +246,7 @@ export default async function HomePage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <h3 className="font-heading font-bold text-dark text-xl mb-4">
+              <h3 className="font-body font-bold text-dark text-xl mb-4">
                 Why Outdoor Renovations
               </h3>
               <ul className="space-y-3 font-body">
@@ -268,7 +280,7 @@ export default async function HomePage() {
           <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
             Service Area
           </p>
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
             Serving Austin&apos;s Finest Communities
           </h2>
           <p className="text-muted max-w-2xl mx-auto mb-8 font-body">

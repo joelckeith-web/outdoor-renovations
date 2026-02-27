@@ -7,7 +7,7 @@ import { siteConfig } from '@/lib/site-config';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Capabilities', href: '/services' },
+  { label: 'Services', href: '/services' },
   { label: 'Service Areas', href: '/locations' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

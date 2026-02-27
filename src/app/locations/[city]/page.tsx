@@ -126,7 +126,7 @@ export default function LocationPage({
             </div>
             <div className="md:col-span-2">
               <div className="bg-white rounded-xl p-6 text-dark shadow-2xl">
-                <h2 className="text-xl font-heading font-extrabold text-dark mb-1 text-center">
+                <h2 className="text-xl font-body font-extrabold text-dark mb-1 text-center">
                   Get Your FREE Consultation
                 </h2>
                 <p className="text-sm text-muted font-body mb-4 text-center">
@@ -187,7 +187,7 @@ export default function LocationPage({
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="font-heading font-bold text-dark">Excellent</span>
+            <span className="font-body font-bold text-dark">Excellent</span>
           </div>
           <span className="flex items-center gap-2 font-body text-muted">
             <Shield className="w-4 h-4 text-primary" /> Licensed Contractor
@@ -226,12 +226,12 @@ export default function LocationPage({
                   ))}
                 </nav>
                 <div className="mt-6 p-4 bg-dark rounded-lg">
-                  <p className="text-white font-heading font-bold text-sm mb-2">
+                  <p className="text-white font-body font-bold text-sm mb-2">
                     Need Help Now?
                   </p>
                   <a
                     href={siteConfig.phoneHref}
-                    className="text-primary font-heading font-bold text-lg flex items-center gap-2"
+                    className="text-primary font-body font-bold text-lg flex items-center gap-2"
                   >
                     <Phone className="w-4 h-4" />
                     {siteConfig.phone}
@@ -247,7 +247,7 @@ export default function LocationPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   {location.county} County
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-6">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-6">
                   {location.whyTrustHeading}
                 </h2>
                 <p className="text-muted font-body font-bold mb-4">
@@ -285,7 +285,7 @@ export default function LocationPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   Residential
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {location.residentialHeading}
                 </h2>
                 <p className="text-muted font-body mb-8">
@@ -297,7 +297,7 @@ export default function LocationPage({
                       key={service.name}
                       className="border-l-4 border-primary pl-5 py-1"
                     >
-                      <h3 className="font-heading font-bold text-dark text-lg mb-1">
+                      <h3 className="font-body font-bold text-dark text-lg mb-1">
                         {service.name}
                       </h3>
                       <p className="text-muted font-body text-sm">
@@ -325,7 +325,7 @@ export default function LocationPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   Local Experts
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {location.expertiseHeading}
                 </h2>
                 <p className="text-muted font-body font-bold mb-4">
@@ -351,14 +351,14 @@ export default function LocationPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   Materials
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {location.equipmentHeading}
                 </h2>
                 <p className="text-muted font-body mb-6">
                   {location.equipmentBody}
                 </p>
                 <div className="bg-accent rounded-xl p-6">
-                  <h3 className="font-heading font-bold text-dark mb-4">
+                  <h3 className="font-body font-bold text-dark mb-4">
                     Premium Materials &amp; Systems We Use
                   </h3>
                   <ul className="space-y-3">
@@ -389,7 +389,7 @@ export default function LocationPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   Guarantees
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {location.protectionHeading}
                 </h2>
                 <p className="text-muted font-body font-bold mb-4">
@@ -416,7 +416,7 @@ export default function LocationPage({
       <section className="py-8 bg-white border-t border-gray-100">
         <div className="container-narrow flex items-center gap-4">
           <div>
-            <p className="font-heading font-extrabold text-dark text-sm">EXCELLENT</p>
+            <p className="font-body font-extrabold text-dark text-sm">EXCELLENT</p>
             <div className="flex gap-0.5 my-1">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -425,7 +425,7 @@ export default function LocationPage({
             <p className="text-xs text-muted font-body">Based on reviews</p>
           </div>
           <div className="text-sm text-muted font-body">
-            <span className="font-heading font-bold text-dark">Google</span> Reviews
+            <span className="font-body font-bold text-dark">Google</span> Reviews
           </div>
         </div>
       </section>
@@ -437,7 +437,7 @@ export default function LocationPage({
             <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
               Commercial
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-white mb-4">
               Complete Commercial Landscape Solutions
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-body">
@@ -453,7 +453,7 @@ export default function LocationPage({
                 key={service}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10"
               >
-                <p className="font-heading font-bold text-white text-sm">
+                <p className="font-body font-bold text-white text-sm">
                   {service}
                 </p>
               </div>
@@ -473,7 +473,7 @@ export default function LocationPage({
           <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
             Service Area
           </p>
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
             Proudly Serving {location.city} &amp; {location.county} County
           </h2>
           <p className="text-muted max-w-2xl mx-auto mb-8 font-body">
@@ -483,7 +483,7 @@ export default function LocationPage({
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
             <div className="bg-primary text-white rounded-lg p-3 shadow-sm">
-              <p className="font-heading font-bold flex items-center justify-center gap-1.5">
+              <p className="font-body font-bold flex items-center justify-center gap-1.5">
                 <MapPin className="w-4 h-4" />
                 {location.city}
               </p>
@@ -494,13 +494,13 @@ export default function LocationPage({
                 href={`/locations/${city.toLowerCase().replace(/\s+/g, "-")}`}
                 className="bg-light rounded-lg p-3 shadow-sm border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all"
               >
-                <p className="font-heading font-bold text-dark">{city}</p>
+                <p className="font-body font-bold text-dark">{city}</p>
               </Link>
             ))}
           </div>
           <Link
             href="/locations"
-            className="inline-flex items-center gap-1 text-primary font-heading font-bold text-sm mt-6 hover:gap-2 transition-all"
+            className="inline-flex items-center gap-1 text-primary font-body font-bold text-sm mt-6 hover:gap-2 transition-all"
           >
             View All Service Areas <ChevronRight className="w-4 h-4" />
           </Link>

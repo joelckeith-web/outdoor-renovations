@@ -45,7 +45,7 @@ export function FAQAccordion({ faqs, title = 'Frequently Asked Questions' }: FAQ
                 className="w-full flex items-center justify-between py-5 px-6 text-left group hover:bg-gray-50/50 transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-heading font-semibold text-dark text-base md:text-lg pr-4">
+                <span className="font-body font-semibold text-dark text-base md:text-lg pr-4">
                   {faq.question}
                 </span>
                 <span className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">

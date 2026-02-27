@@ -188,7 +188,7 @@ export default async function ServicesPricingPage() {
                 className="flex flex-col items-center gap-2"
               >
                 <item.icon className="w-7 h-7 text-primary" />
-                <p className="font-heading font-bold text-dark text-sm">
+                <p className="font-body font-bold text-dark text-sm">
                   {item.text}
                 </p>
               </div>
@@ -203,7 +203,7 @@ export default async function ServicesPricingPage() {
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
               Landscape Service Pricing Guide
             </h2>
             <p className="text-muted max-w-2xl mx-auto font-body">
@@ -216,7 +216,7 @@ export default async function ServicesPricingPage() {
           <div className="space-y-10">
             {pricingCategories.map((category) => (
               <div key={category.category}>
-                <h3 className="text-2xl font-heading font-bold text-dark mb-4 pb-2 border-b-2 border-primary/20">
+                <h3 className="text-2xl font-body font-bold text-dark mb-4 pb-2 border-b-2 border-primary/20">
                   {category.category}
                 </h3>
                 <div className="grid gap-3">
@@ -231,7 +231,7 @@ export default async function ServicesPricingPage() {
                           {service.name}
                         </span>
                       </div>
-                      <span className="font-heading font-bold text-primary-dark whitespace-nowrap ml-4">
+                      <span className="font-body font-bold text-primary-dark whitespace-nowrap ml-4">
                         {service.priceRange}
                       </span>
                     </div>
@@ -242,7 +242,7 @@ export default async function ServicesPricingPage() {
           </div>
 
           <div className="mt-8 p-6 bg-primary/10 rounded-xl border border-primary/20 text-center">
-            <p className="font-heading font-bold text-dark text-lg mb-2">
+            <p className="font-body font-bold text-dark text-lg mb-2">
               Prices are estimates. Your actual cost may vary.
             </p>
             <p className="text-muted font-body mb-4">
@@ -259,7 +259,7 @@ export default async function ServicesPricingPage() {
       {/* Bundle Banner */}
       <section className="bg-primary text-white py-10">
         <div className="container-narrow text-center">
-          <h2 className="text-2xl md:text-3xl font-heading font-extrabold mb-3">
+          <h2 className="text-2xl md:text-3xl font-body font-extrabold mb-3">
             Design + Build Package: Save on Your Full Project
           </h2>
           <p className="font-body text-white/90 max-w-2xl mx-auto mb-4">
@@ -269,7 +269,7 @@ export default async function ServicesPricingPage() {
           </p>
           <a
             href={siteConfig.phoneHref}
-            className="inline-flex items-center gap-2 bg-white text-primary font-heading font-bold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-primary font-body font-bold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors"
           >
             <Phone className="w-5 h-5" />
             Call {siteConfig.phone}
@@ -281,7 +281,7 @@ export default async function ServicesPricingPage() {
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark">
               Pricing Questions
             </h2>
           </div>
@@ -291,7 +291,7 @@ export default async function ServicesPricingPage() {
                 key={faq.question}
                 className="border border-gray-100 rounded-lg p-6"
               >
-                <h3 className="font-heading font-bold text-dark text-lg mb-2">
+                <h3 className="font-body font-bold text-dark text-lg mb-2">
                   {faq.question}
                 </h3>
                 <p className="text-muted font-body">{faq.answer}</p>

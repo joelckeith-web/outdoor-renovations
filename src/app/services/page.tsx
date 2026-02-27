@@ -23,7 +23,7 @@ import { allServicesQuery } from "@/lib/queries";
 import type { SanityServiceListItem } from "@/lib/queries";
 
 export const metadata: Metadata = {
-  title: "Our Capabilities | Landscape Design, Build & Maintain",
+  title: "Our Services | Landscape Design, Build & Maintain",
   description:
     "Outdoor Renovations offers full-service landscape capabilities including design, hardscaping, custom carpentry, softscaping, irrigation, lighting, metal fabrication, and property management across the Austin metro.",
 };
@@ -88,7 +88,7 @@ export default async function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/85 to-dark/70" />
         <div className="relative container-narrow section-padding pt-28 md:pt-32">
           <p className="text-primary-light font-body font-bold text-sm uppercase tracking-widest mb-4">
-            Our Capabilities
+            Our Services
           </p>
           <h1 className="text-4xl md:text-5xl font-heading font-extrabold leading-tight mb-6 max-w-3xl">
             Design. Build. Maintain.
@@ -118,7 +118,7 @@ export default async function ServicesPage() {
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
               Full-Service Outdoor Renovation
             </h2>
             <p className="text-muted max-w-2xl mx-auto font-body">
@@ -137,7 +137,7 @@ export default async function ServicesPage() {
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="group flex flex-col rounded-xl border border-gray-100 bg-white hover:border-primary/30 hover:shadow-lg transition-all duration-200 overflow-hidden"
+                  className="group flex flex-col rounded-xl bg-white shadow-xl shadow-gray-300/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 overflow-hidden hover:-translate-y-1 border border-gray-100/50"
                 >
                   <div className="relative h-48 w-full">
                     <Image
@@ -148,12 +148,14 @@ export default async function ServicesPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
+                  {/* Accent bar */}
+                  <div className="h-1 bg-gradient-to-r from-primary via-primary-light to-primary" />
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                        {Icon && <Icon className="w-5 h-5 text-primary" />}
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                        {Icon && <Icon className="w-5 h-5 text-primary group-hover:text-white transition-colors" />}
                       </div>
-                      <h3 className="text-lg font-heading font-bold text-dark group-hover:text-primary transition-colors">
+                      <h3 className="text-lg font-body font-bold text-dark group-hover:text-primary transition-colors">
                         {service.name}
                       </h3>
                     </div>

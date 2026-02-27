@@ -18,8 +18,14 @@ body {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  /* Only the main page title (h1) uses Playfair Display */
+  h1 {
     @apply font-heading font-extrabold tracking-tight;
+  }
+
+  /* All other headings use Poppins */
+  h2, h3, h4, h5, h6 {
+    @apply font-body font-bold tracking-tight;
   }
 
   body {

@@ -85,20 +85,22 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
   }, [scrollBy]);
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
-      <div className="container-narrow">
+    <section className="section-padding overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-dark relative">
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.15),transparent_70%)]" />
+      <div className="relative container-narrow">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
           <div className="text-center md:text-left">
-            <p className="text-primary font-heading font-bold text-sm uppercase tracking-widest mb-2">
+            <p className="text-primary-light font-body font-bold text-sm uppercase tracking-widest mb-2">
               What We Do
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark">
-              HVAC Services for Every Need
+            <h2 className="text-3xl md:text-4xl font-body font-bold text-white">
+              Landscape Services for Every Need
             </h2>
-            <p className="text-muted max-w-2xl mt-3 font-body mx-auto md:mx-0">
-              From emergency repairs to complete new construction systems, QC
-              Mechanical delivers expert heating, cooling, and ventilation
-              solutions backed by 25+ years of Puget Sound experience.
+            <p className="text-gray-300 max-w-2xl mt-3 font-body mx-auto md:mx-0">
+              From initial concept and design through construction and ongoing
+              care, Outdoor Renovations is your single point of contact for
+              every aspect of your outdoor space.
             </p>
           </div>
           <div className="hidden md:flex items-center gap-3 shrink-0 ml-8">
@@ -106,10 +108,10 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
               type="button"
               onClick={() => scrollBy('left')}
               disabled={!canScrollLeft}
-              className={`w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center transition-all ${
+              className={`w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center transition-all ${
                 canScrollLeft
-                  ? 'bg-primary text-white hover:bg-primary-dark hover:border-primary-dark'
-                  : 'opacity-30 cursor-not-allowed text-primary'
+                  ? 'bg-white text-primary-dark hover:bg-accent hover:border-white'
+                  : 'opacity-30 cursor-not-allowed text-white/50'
               }`}
               aria-label="Scroll services left"
             >
@@ -119,10 +121,10 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
               type="button"
               onClick={() => scrollBy('right')}
               disabled={!canScrollRight}
-              className={`w-11 h-11 rounded-full border-2 border-primary flex items-center justify-center transition-all ${
+              className={`w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center transition-all ${
                 canScrollRight
-                  ? 'bg-primary text-white hover:bg-primary-dark hover:border-primary-dark'
-                  : 'opacity-30 cursor-not-allowed text-primary'
+                  ? 'bg-white text-primary-dark hover:bg-accent hover:border-white'
+                  : 'opacity-30 cursor-not-allowed text-white/50'
               }`}
               aria-label="Scroll services right"
             >
@@ -147,7 +149,7 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
               key={service.slug}
               href={`/services/${service.slug}`}
               data-service-card
-              className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-[320px] lg:w-[calc((100vw-7*1.5rem)/6)] xl:w-[calc((100vw-7*1.5rem)/5)] rounded-xl overflow-hidden bg-white shadow-lg shadow-gray-200/80 hover:shadow-xl hover:shadow-primary/15 transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              className="group flex-shrink-0 w-[280px] sm:w-[300px] md:w-[320px] lg:w-[calc((100vw-7*1.5rem)/6)] xl:w-[calc((100vw-7*1.5rem)/5)] rounded-xl overflow-hidden bg-white shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:-translate-y-1.5 border border-white/20"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -160,7 +162,7 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-heading font-bold text-dark mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-body font-bold text-dark mb-2 group-hover:text-primary transition-colors">
                   {service.name}
                 </h3>
                 <p className="text-muted text-sm font-body leading-relaxed line-clamp-3">
@@ -179,7 +181,7 @@ export function ServiceCarousel({ services }: ServiceCarouselProps) {
           {services.map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 rounded-full bg-primary/30"
+              className="w-2 h-2 rounded-full bg-white/40"
             />
           ))}
         </div>

@@ -63,10 +63,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Capabilities */}
+          {/* Column 2: Services */}
           <div>
-            <h3 className="font-heading font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
-              Capabilities
+            <h3 className="font-body font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
+              Services
             </h3>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
@@ -84,7 +84,7 @@ export function Footer() {
 
           {/* Column 3: Company */}
           <div>
-            <h3 className="font-heading font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
+            <h3 className="font-body font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
               Company
             </h3>
             <ul className="space-y-2.5">
@@ -111,7 +111,7 @@ export function Footer() {
 
           {/* Column 4: Contact Info */}
           <div>
-            <h3 className="font-heading font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
+            <h3 className="font-body font-extrabold text-sm uppercase tracking-wider text-primary-light mb-4">
               Contact Info
             </h3>
             <ul className="space-y-4">

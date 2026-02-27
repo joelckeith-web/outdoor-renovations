@@ -122,7 +122,7 @@ export default async function AboutPage() {
               <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                 Our Story
               </p>
-              <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-6">
+              <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-6">
                 Renovating Outdoor Dreams to Reality
               </h2>
               <div className="space-y-4 text-muted font-body">
@@ -170,7 +170,7 @@ export default async function AboutPage() {
                     sizes="(max-width: 768px) 100vw, 40vw"
                   />
                 </div>
-                <h3 className="font-heading font-bold text-dark text-xl mb-6">
+                <h3 className="font-body font-bold text-dark text-xl mb-6">
                   At a Glance
                 </h3>
                 <div className="space-y-4">
@@ -204,7 +204,7 @@ export default async function AboutPage() {
                   <p className="text-sm text-muted font-body mb-1">
                     Service Area
                   </p>
-                  <p className="font-heading font-bold text-dark text-sm">
+                  <p className="font-body font-bold text-dark text-sm">
                     {siteConfig.serviceArea}
                   </p>
                 </div>
@@ -227,7 +227,7 @@ export default async function AboutPage() {
             <p className="text-primary-light font-body font-bold text-sm uppercase tracking-widest mb-2">
               Our Process
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-white mb-4">
               Design. Build. Maintain.
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-body">
@@ -239,7 +239,7 @@ export default async function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <PenTool className="w-12 h-12 text-primary-light mb-4" />
-              <h3 className="text-xl font-heading font-bold text-white mb-3">
+              <h3 className="text-xl font-body font-bold text-white mb-3">
                 Design
               </h3>
               <p className="text-gray-300 font-body">
@@ -252,7 +252,7 @@ export default async function AboutPage() {
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <Hammer className="w-12 h-12 text-primary-light mb-4" />
-              <h3 className="text-xl font-heading font-bold text-white mb-3">
+              <h3 className="text-xl font-body font-bold text-white mb-3">
                 Build
               </h3>
               <p className="text-gray-300 font-body">
@@ -266,7 +266,7 @@ export default async function AboutPage() {
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <TreeDeciduous className="w-12 h-12 text-primary-light mb-4" />
-              <h3 className="text-xl font-heading font-bold text-white mb-3">
+              <h3 className="text-xl font-body font-bold text-white mb-3">
                 Maintain
               </h3>
               <p className="text-gray-300 font-body">
@@ -284,7 +284,7 @@ export default async function AboutPage() {
       <section className="section-padding bg-light">
         <div className="container-narrow">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
               Our Credentials &amp; Qualifications
             </h2>
             <p className="text-muted max-w-2xl mx-auto font-body">
@@ -297,7 +297,7 @@ export default async function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 border border-gray-100">
               <Shield className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-heading font-bold text-dark mb-3">
+              <h3 className="text-xl font-body font-bold text-dark mb-3">
                 Licensed General Contractor
               </h3>
               <p className="text-muted font-body mb-4">
@@ -324,7 +324,7 @@ export default async function AboutPage() {
 
             <div className="bg-white rounded-xl p-8 border border-gray-100">
               <Award className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-heading font-bold text-dark mb-3">
+              <h3 className="text-xl font-body font-bold text-dark mb-3">
                 Fully Bonded &amp; Insured
               </h3>
               <p className="text-muted font-body mb-4">
@@ -351,7 +351,7 @@ export default async function AboutPage() {
 
             <div className="bg-white rounded-xl p-8 border border-gray-100">
               <Heart className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-heading font-bold text-dark mb-3">
+              <h3 className="text-xl font-body font-bold text-dark mb-3">
                 1-Year Service Guarantee
               </h3>
               <p className="text-muted font-body mb-4">
@@ -386,7 +386,7 @@ export default async function AboutPage() {
             <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
               Full-Service Capabilities
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
               Everything Your Outdoor Space Needs
             </h2>
             <p className="text-muted max-w-2xl mx-auto font-body">
@@ -407,7 +407,7 @@ export default async function AboutPage() {
                 className="group flex flex-col items-center text-center p-6 bg-light rounded-xl border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all"
               >
                 <item.icon className="w-10 h-10 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                <p className="font-heading font-bold text-dark group-hover:text-primary transition-colors">
+                <p className="font-body font-bold text-dark group-hover:text-primary transition-colors">
                   {item.label}
                 </p>
               </Link>

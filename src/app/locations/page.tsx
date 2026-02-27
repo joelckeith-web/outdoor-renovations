@@ -74,7 +74,7 @@ export default function LocationsPage() {
       <section className="section-padding bg-white">
         <div className="container-narrow">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-body font-extrabold text-dark mb-4">
               Find Landscape Services Near You
             </h2>
             <p className="text-muted max-w-2xl mx-auto font-body">
@@ -92,7 +92,7 @@ export default function LocationsPage() {
                 key={region.name}
                 className="bg-light rounded-xl p-6 border border-gray-100"
               >
-                <h3 className="font-heading font-extrabold text-dark text-xl mb-4 flex items-center gap-2">
+                <h3 className="font-body font-extrabold text-dark text-xl mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-primary" />
                   {region.name}
                 </h3>
@@ -103,7 +103,7 @@ export default function LocationsPage() {
                       href={`/locations/${city.toLowerCase().replace(/\s+/g, "-")}`}
                       className="bg-white rounded-lg p-3 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all group"
                     >
-                      <p className="font-heading font-bold text-dark group-hover:text-primary transition-colors">
+                      <p className="font-body font-bold text-dark group-hover:text-primary transition-colors">
                         {city}
                       </p>
                       <span className="text-primary text-xs font-bold flex items-center justify-center gap-0.5 mt-1">

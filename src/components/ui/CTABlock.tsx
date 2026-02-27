@@ -50,7 +50,7 @@ export function CTABlock({
         {/* Phone number */}
         <a
           href={siteConfig.phoneHref}
-          className={`inline-flex items-center gap-2 font-heading font-extrabold text-2xl md:text-3xl transition-colors mb-8 ${
+          className={`inline-flex items-center gap-2 font-body font-bold text-2xl md:text-3xl transition-colors mb-8 ${
             hasImage
               ? 'text-primary-light hover:text-white'
               : 'text-primary-dark hover:text-primary'

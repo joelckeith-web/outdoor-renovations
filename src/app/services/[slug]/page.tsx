@@ -109,7 +109,7 @@ export default async function ServiceDetailPage({
   );
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "Capabilities", url: "/services" },
+    { name: "Services", url: "/services" },
     { name: serviceName, url: `/services/${serviceSlug}` },
   ]);
   const faqSchema = faqs.length > 0 ? generateFAQSchema(faqs) : null;
@@ -149,18 +149,18 @@ export default async function ServiceDetailPage({
               <nav className="text-sm text-gray-400 mb-4 font-body">
                 <Link href="/" className="hover:text-primary">Home</Link>
                 <span className="mx-2">/</span>
-                <Link href="/services" className="hover:text-primary">Capabilities</Link>
+                <Link href="/services" className="hover:text-primary">Services</Link>
                 <span className="mx-2">/</span>
                 <span className="text-white">{serviceName}</span>
               </nav>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4 text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.6),_0_1px_3px_rgba(0,0,0,0.4)]">
                 {sanityData?.heroHeadline || serviceName}
               </h1>
-              <p className="text-lg text-gray-300 mb-4 font-body">
+              <p className="text-lg text-white mb-4 font-body [text-shadow:_0_1px_8px_rgba(0,0,0,0.5)]">
                 {heroSubheadline}
               </p>
               {heroBody && (
-                <p className="text-gray-400 mb-6 font-body">{heroBody}</p>
+                <p className="text-gray-200 mb-6 font-body [text-shadow:_0_1px_6px_rgba(0,0,0,0.4)]">{heroBody}</p>
               )}
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Link
@@ -193,7 +193,7 @@ export default async function ServiceDetailPage({
             {/* Right — Contact Form */}
             <div className="md:col-span-2">
               <div className="bg-white rounded-xl p-6 text-dark shadow-2xl">
-                <h2 className="text-xl font-heading font-extrabold text-dark mb-1 text-center">
+                <h2 className="text-xl font-body font-extrabold text-dark mb-1 text-center">
                   Get Your FREE Consultation
                 </h2>
                 <p className="text-sm text-muted font-body mb-4 text-center">
@@ -279,7 +279,7 @@ export default async function ServiceDetailPage({
                 <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
                   Why Choose {serviceName}
                 </p>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {pageData.sections[0].heading}
                 </h2>
                 <p className="text-muted font-body mb-4">
@@ -327,7 +327,7 @@ export default async function ServiceDetailPage({
                 </div>
               )}
               <div className={pageData.sections[1].image ? "order-1 md:order-2" : "md:col-span-2 max-w-3xl mx-auto"}>
-                <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
                   {pageData.sections[1].heading}
                 </h2>
                 <p className="text-muted font-body mb-4">
@@ -353,7 +353,7 @@ export default async function ServiceDetailPage({
       {pageData?.systemsList && !sanityData?.serviceDescription && (
         <section className="section-padding bg-white">
           <div className="container-narrow">
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-8 text-center">
               Materials &amp; Systems We Work With
             </h2>
             <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
@@ -362,7 +362,7 @@ export default async function ServiceDetailPage({
                   key={i}
                   className="border-l-4 border-primary pl-5 py-3 bg-light rounded-r-lg shadow-sm"
                 >
-                  <p className="font-heading font-bold text-dark">{system}</p>
+                  <p className="font-body font-bold text-dark">{system}</p>
                 </div>
               ))}
             </div>
@@ -374,7 +374,7 @@ export default async function ServiceDetailPage({
       {pageData?.advantages && !sanityData?.serviceDescription && (
         <section className="section-padding bg-light">
           <div className="container-narrow">
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-8 text-center">
               The Advantages of Professional {serviceName}
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -399,7 +399,7 @@ export default async function ServiceDetailPage({
             <div className="space-y-8">
               {sanityData.serviceDetails.map((detail, idx) => (
                 <div key={idx}>
-                  <h3 className="text-xl font-heading font-bold text-dark mb-2">
+                  <h3 className="text-xl font-body font-bold text-dark mb-2">
                     {detail.detail}
                   </h3>
                   <p className="text-muted font-body">{detail.description}</p>
@@ -414,7 +414,7 @@ export default async function ServiceDetailPage({
       {processSteps && processSteps.length > 0 && (
         <section className="section-padding bg-dark text-white">
           <div className="container-narrow">
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-white mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-body font-extrabold text-white mb-8 text-center">
               Our {serviceName} Process
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -423,10 +423,10 @@ export default async function ServiceDetailPage({
                   key={idx}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-heading font-bold text-lg mb-4">
+                  <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-body font-bold text-lg mb-4">
                     {idx + 1}
                   </div>
-                  <h3 className="font-heading font-bold text-white text-lg mb-2">
+                  <h3 className="font-body font-bold text-white text-lg mb-2">
                     {step.title}
                   </h3>
                   <p className="text-gray-300 font-body text-sm">
@@ -443,7 +443,7 @@ export default async function ServiceDetailPage({
       {pageData?.investmentSection && !sanityData?.serviceDescription && (
         <section className="section-padding bg-white">
           <div className="container-narrow max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+            <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
               {pageData.investmentSection.heading}
             </h2>
             <p className="text-muted font-body mb-6">
@@ -467,7 +467,7 @@ export default async function ServiceDetailPage({
       {pageData?.whyChooseBullets && !sanityData?.serviceDescription && (
         <section className="section-padding bg-light">
           <div className="container-narrow max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-6 text-center">
               Why Choose Outdoor Renovations for {serviceName}
             </h2>
             <ul className="space-y-3">
@@ -488,7 +488,7 @@ export default async function ServiceDetailPage({
           <p className="text-primary font-body font-bold text-sm uppercase tracking-widest mb-2">
             Service Area
           </p>
-          <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-dark mb-4">
+          <h2 className="text-2xl md:text-3xl font-body font-extrabold text-dark mb-4">
             {serviceName} Across the Austin Metro
           </h2>
           <p className="text-muted max-w-2xl mx-auto mb-6 font-body">
@@ -532,8 +532,8 @@ export default async function ServiceDetailPage({
       {/* ─── Related Services ─── */}
       <section className="section-padding bg-light">
         <div className="container-narrow">
-          <h2 className="text-2xl font-heading font-extrabold text-dark mb-6 text-center">
-            Related Capabilities
+          <h2 className="text-2xl font-body font-extrabold text-dark mb-6 text-center">
+            Related Services
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
             {services
@@ -545,7 +545,7 @@ export default async function ServiceDetailPage({
                   href={`/services/${s.slug}`}
                   className="bg-white p-5 rounded-lg border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all group"
                 >
-                  <h3 className="font-heading font-bold text-dark group-hover:text-primary transition-colors mb-1">
+                  <h3 className="font-body font-bold text-dark group-hover:text-primary transition-colors mb-1">
                     {s.name}
                   </h3>
                   <p className="text-muted text-sm font-body mb-2">
