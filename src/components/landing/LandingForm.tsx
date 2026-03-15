@@ -1,9 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Phone, Send, CheckCircle, ShieldCheck } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
+import { useUTMParams } from '@/lib/useUTMParams';
+
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
 
 interface LandingFormData {
   name: string;
@@ -19,12 +26,22 @@ interface LandingFormProps {
   leadSource: string;
 }
 
-export function LandingForm({
+export function LandingForm(props: LandingFormProps) {
+  return (
+    <Suspense>
+      <LandingFormInner {...props} />
+    </Suspense>
+  );
+}
+
+function LandingFormInner({
   serviceLabel,
   messagePlaceholder = 'Briefly describe your project (optional)',
   leadSource,
 }: LandingFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const utmParams = useUTMParams();
   const {
     register,
     handleSubmit,
@@ -32,9 +49,41 @@ export function LandingForm({
   } = useForm<LandingFormData>();
 
   const onSubmit = async (data: LandingFormData) => {
-    console.log('LP Form data:', { ...data, service: serviceLabel, leadSource });
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setIsSubmitted(true);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          service: serviceLabel,
+          leadSource,
+          utmSource: utmParams.utm_source,
+          utmMedium: utmParams.utm_medium,
+          utmCampaign: utmParams.utm_campaign,
+          utmTerm: utmParams.utm_term,
+          utmContent: utmParams.utm_content,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      // Push form_submission event to GTM dataLayer
+      window.dataLayer?.push({
+        event: 'form_submission',
+        form_name: leadSource,
+        form_service: serviceLabel,
+      });
+
+      setIsSubmitted(true);
+    } catch {
+      setSubmitError(
+        'Something went wrong. Please try again or call us directly.'
+      );
+    }
   };
 
   if (isSubmitted) {
@@ -134,6 +183,12 @@ export function LandingForm({
             placeholder={messagePlaceholder}
           />
         </div>
+
+        {submitError && (
+          <p className="text-red-600 text-sm text-center font-body">
+            {submitError}
+          </p>
+        )}
 
         <button
           type="submit"
