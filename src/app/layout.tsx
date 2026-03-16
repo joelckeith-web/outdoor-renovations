@@ -6,6 +6,7 @@ import { Header } from "@/components/global/Header";
 import { Footer } from "@/components/global/Footer";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -55,6 +56,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`,
             }}
           />
+        )}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga4-config"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
+              }}
+            />
+          </>
         )}
       </head>
       <body
