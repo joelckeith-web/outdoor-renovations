@@ -118,14 +118,14 @@ function LandingFormInner({
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-4" style={{ color: '#1A1A1A' }}>
         <input type="hidden" value={leadSource} name="leadSource" />
 
         <div>
           <input
             type="text"
             {...register('name', { required: 'Name is required' })}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
             placeholder="Full Name *"
           />
           {errors.name && (
@@ -137,7 +137,7 @@ function LandingFormInner({
           <input
             type="tel"
             {...register('phone', { required: 'Phone is required' })}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
             placeholder="Phone Number *"
           />
           {errors.phone && (
@@ -155,7 +155,7 @@ function LandingFormInner({
                 message: 'Enter a valid email',
               },
             })}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
             placeholder="Email Address *"
           />
           {errors.email && (
@@ -167,7 +167,7 @@ function LandingFormInner({
           <input
             type="text"
             {...register('zipCode', { required: 'ZIP code is required' })}
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-gray-200 rounded-lg font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-gray-400"
             placeholder="ZIP Code *"
           />
           {errors.zipCode && (
