@@ -2,7 +2,7 @@ export const siteConfig = {
   businessName: "Outdoor Renovations",
   phone: "(512) 743-0570",
   phoneHref: "tel:+15127430570",
-  email: "Kstoutenger@outdoorreno.com",
+  email: "kstoutenger@gmail.com",
   address: {
     street: "1108 Hollybluff St",
     city: "Kyle",
