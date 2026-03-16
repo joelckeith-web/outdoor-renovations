@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { Header } from "@/components/global/Header";
-import { Footer } from "@/components/global/Footer";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -86,9 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             />
           </noscript>
         )}
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
