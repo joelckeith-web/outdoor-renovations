@@ -8,11 +8,14 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow LP routes, the contact API (used by LP forms), and Next.js internals
+  // Allow LP routes, the contact API, static assets, and Next.js internals
   if (
     pathname.startsWith('/lp') ||
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next') ||
+    pathname.startsWith('/images/') ||
+    pathname.startsWith('/videos/') ||
+    pathname.startsWith('/fonts/') ||
     pathname === '/favicon.ico'
   ) {
     return NextResponse.next();
