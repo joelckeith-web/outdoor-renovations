@@ -67,11 +67,13 @@ ${utmSection}
 Sent from: ${leadSource}
 `;
 
-    const contactEmail = process.env.CONTACT_EMAIL || 'Kyle@outdoorreno.com';
+    const contactEmails = (process.env.CONTACT_EMAIL || 'Kyle@outdoorreno.com')
+      .split(',')
+      .map((e) => e.trim());
 
     const { error } = await resend.emails.send({
       from: 'Outdoor Renovations <onboarding@resend.dev>',
-      to: [contactEmail],
+      to: contactEmails,
       replyTo: email,
       subject: `New Lead: ${service} — ${name} (${zipCode})`,
       text: emailBody,
