@@ -15,8 +15,6 @@ const companyLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
   { label: 'Service Areas', href: '/locations' },
-  { label: 'Outdoor Transformation LP', href: '/lp/outdoor-transformation' },
-  { label: 'Hardscaping & Outdoor Living LP', href: '/lp/hardscaping-outdoor-living' },
 ];
 
 export function Footer() {
