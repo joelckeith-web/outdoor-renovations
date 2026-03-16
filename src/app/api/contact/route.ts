@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
 interface ContactFormBody {
   name: string;
@@ -18,15 +18,22 @@ interface ContactFormBody {
 
 export async function POST(request: NextRequest) {
   try {
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not set');
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('SMTP_USER or SMTP_PASS is not set');
       return NextResponse.json(
         { error: 'Email service not configured' },
         { status: 500 }
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
     const body: ContactFormBody = await request.json();
 
     const { name, phone, email, zipCode, message, service, leadSource } = body;
@@ -67,31 +74,24 @@ ${utmSection}
 Sent from: ${leadSource}
 `;
 
-    const contactEmails = (process.env.CONTACT_EMAIL || 'Kyle@outdoorreno.com')
+    const contactEmails = (process.env.CONTACT_EMAIL || 'kstoutenger@gmail.com')
       .split(',')
-      .map((e) => e.trim());
+      .map((e) => e.trim())
+      .join(', ');
 
-    const { error } = await resend.emails.send({
-      from: 'Outdoor Renovations <onboarding@resend.dev>',
+    await transporter.sendMail({
+      from: `Outdoor Renovations <${process.env.SMTP_USER}>`,
       to: contactEmails,
       replyTo: email,
       subject: `New Lead: ${service} — ${name} (${zipCode})`,
       text: emailBody,
     });
 
-    if (error) {
-      console.error('Resend error:', JSON.stringify(error));
-      return NextResponse.json(
-        { error: 'Failed to send email', detail: error.message },
-        { status: 500 }
-      );
-    }
-
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error('Contact API error:', err);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', detail: err instanceof Error ? err.message : 'Unknown error' },
       { status: 500 }
     );
   }
