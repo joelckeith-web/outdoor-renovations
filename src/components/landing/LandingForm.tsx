@@ -118,7 +118,7 @@ function LandingFormInner({
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-4" style={{ color: '#1A1A1A' }}>
+      <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-4">
         <input type="hidden" value={leadSource} name="leadSource" />
 
         <div>

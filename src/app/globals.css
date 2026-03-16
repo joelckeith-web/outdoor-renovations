@@ -31,6 +31,12 @@ body {
   body {
     @apply font-body text-dark;
   }
+
+  input,
+  textarea,
+  select {
+    color: var(--dark);
+  }
 }
 
 @layer components {
