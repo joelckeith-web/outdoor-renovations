@@ -44,7 +44,7 @@ const benefits = [
     title: 'Custom Landscape Design',
     description:
       'Custom to-scale 2D plans and 3D renderings so you can see your project before a single shovel breaks ground.',
-    image: '/images/project-landscape.jpg',
+    image: '/images/project-design-render.jpg',
   },
   {
     icon: Layers,
@@ -72,14 +72,14 @@ const benefits = [
     title: 'Single Point of Contact',
     description:
       'From initial design consultation through final installation and ongoing maintenance — one team, one vision, one call.',
-    image: '/images/project-outdoor-living.jpg',
+    image: '/images/owner-kyle.jpg',
   },
   {
     icon: Heart,
     title: 'Ongoing Property Care',
     description:
       'White-glove maintenance plans to protect your investment year-round. We design it, build it, and maintain it.',
-    image: '/images/project-garden.jpg',
+    image: '/images/project-property-care.jpg',
   },
 ];
 
