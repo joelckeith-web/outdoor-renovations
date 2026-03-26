@@ -627,23 +627,11 @@ export default function OutdoorRenovationLP() {
 
           <a
             href={siteConfig.phoneHref}
-            className="inline-flex items-center gap-2 bg-white text-primary font-body font-bold text-2xl md:text-3xl px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-colors shadow-lg mb-8"
+            className="inline-flex items-center gap-2 font-body font-bold text-2xl md:text-3xl text-white hover:text-primary-light transition-colors"
           >
             <Phone className="h-6 w-6 md:h-7 md:w-7" />
             {siteConfig.phone}
           </a>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <ScrollToTopLink className="btn-primary text-base px-8 py-3.5">
-              Get My Consultation
-            </ScrollToTopLink>
-            <a
-              href={siteConfig.phoneHref}
-              className="inline-flex items-center gap-2 bg-primary text-white font-body font-bold text-base px-8 py-3.5 rounded-lg hover:bg-white hover:text-primary transition-colors"
-            >
-              Call Now
-            </a>
-          </div>
         </div>
       </section>
     </>
