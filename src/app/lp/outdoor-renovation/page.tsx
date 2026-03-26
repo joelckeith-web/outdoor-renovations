@@ -461,38 +461,39 @@ export default function OutdoorRenovationLP() {
       </section>
 
       {/* ==================== DEEP CONTENT ==================== */}
-      <section className="section-padding bg-accent">
-        <div className="container-narrow">
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/hero-aerial.jpg"
+          alt="Aerial view of Austin Hill Country landscape"
+          fill
+          className="object-cover"
+          quality={75}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-primary-dark/85" />
+
+        <div className="relative container-narrow section-padding">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-dark mb-6">
-              Outdoor Living in Central Texas: What You Need to Know
+            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-6">
+              Outdoor Living in Central Texas
             </h2>
-            <div className="prose font-body text-muted space-y-4 leading-relaxed">
+            <div className="font-body text-gray-200 space-y-4 leading-relaxed text-lg">
               <p>
-                Central Texas presents unique challenges and opportunities for outdoor living. With
-                summer temperatures regularly exceeding 100 degrees, expansive clay soils that shift
-                with moisture levels, and periodic water restrictions, designing a beautiful and
-                functional outdoor space requires deep local expertise.
+                100-degree summers, expansive clay soils, and periodic water restrictions —
+                Central Texas demands landscape expertise most contractors lack. Our team has
+                spent 16+ years mastering what thrives here and what fails.
               </p>
               <p>
-                Our team has spent over 16 years learning what thrives in this environment and what
-                does not. We select drought-tolerant native and adapted plants, design efficient drip
-                irrigation systems that comply with municipal water regulations, and choose hardscape
-                materials rated for extreme UV exposure and thermal cycling.
+                Every project starts with an engineering-grade site assessment. We specify
+                drought-tolerant native plants, efficient drip irrigation that meets municipal
+                codes, and hardscape materials rated for extreme heat and soil movement. Without
+                this groundwork, patios crack, walls shift, and plantings die.
               </p>
               <p>
-                Soil movement is one of the most overlooked factors in Central Texas landscape
-                projects. Without proper grading, drainage, and foundation preparation, patios crack,
-                retaining walls shift, and plantings fail. Every project we design includes
-                engineering-grade site assessment to account for these conditions before we break
-                ground.
-              </p>
-              <p>
-                The reward for getting it right is extraordinary. Austin&apos;s mild winters mean you
-                can enjoy your outdoor space eight to ten months of the year. A well-designed
-                landscape with strategic shade structures, evening lighting, and thoughtful material
-                choices extends that window even further — giving you a true outdoor living room that
-                adds value to your home and quality to your life.
+                The payoff: Austin&apos;s mild winters let you enjoy your outdoor space eight to
+                ten months a year. Pair that with strategic shade structures, evening lighting,
+                and the right materials — and you gain a true outdoor living room that adds value
+                to your home and quality to your daily life.
               </p>
             </div>
           </div>
