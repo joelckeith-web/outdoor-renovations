@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function LandingPageLayout({
   children,
 }: {
@@ -19,12 +17,22 @@ export default function LandingPageLayout({
           </p>
 
           <nav className="flex flex-wrap items-center justify-center gap-4 text-xs font-body">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="https://outdoorreno.com/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">
+            </a>
+            <a
+              href="https://outdoorreno.com/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               Terms of Service
-            </Link>
+            </a>
             <a
               href="https://outdoorreno.com"
               target="_blank"
