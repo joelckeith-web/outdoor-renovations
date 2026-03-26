@@ -73,6 +73,7 @@ const benefits = [
     description:
       'From initial design consultation through final installation and ongoing maintenance — one team, one vision, one call.',
     image: '/images/owner-kyle.jpg',
+    objectPosition: 'center 20%',
   },
   {
     icon: Heart,
@@ -324,6 +325,7 @@ export default function OutdoorRenovationLP() {
                     alt={benefit.title}
                     fill
                     className="object-cover"
+                    style={benefit.objectPosition ? { objectPosition: benefit.objectPosition } : undefined}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
