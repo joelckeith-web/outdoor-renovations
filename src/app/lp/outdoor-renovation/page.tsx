@@ -365,6 +365,19 @@ export default function OutdoorRenovationLP() {
               </div>
             ))}
           </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+            <ScrollToTopLink className="btn-primary text-base px-8 py-3.5">
+              Get My Consultation
+            </ScrollToTopLink>
+            <a
+              href={siteConfig.phoneHref}
+              className="inline-flex items-center gap-2 bg-white text-primary font-body font-bold text-base px-8 py-3.5 rounded-lg hover:bg-primary hover:text-white transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Call Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -495,6 +508,19 @@ export default function OutdoorRenovationLP() {
                 and the right materials — and you gain a true outdoor living room that adds value
                 to your home and quality to your daily life.
               </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
+              <ScrollToTopLink className="btn-primary text-base px-8 py-3.5">
+                Get My Consultation
+              </ScrollToTopLink>
+              <a
+                href={siteConfig.phoneHref}
+                className="inline-flex items-center gap-2 bg-white text-primary-dark font-body font-bold text-base px-8 py-3.5 rounded-lg hover:bg-primary-light hover:text-primary-dark transition-colors shadow-lg"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
             </div>
           </div>
         </div>
