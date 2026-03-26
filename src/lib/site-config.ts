@@ -38,7 +38,7 @@ export const siteConfig = {
   },
   reviewCount: "200+",
   averageRating: "5.0",
-  siteUrl: "https://outdoor-renovations.vercel.app",
+  siteUrl: "https://outdoorreno.com",
   gtmId: "[PLACEHOLDER]",
   motto: "Renovating Outdoor Dreams to Reality",
   tagline: "Design | Landscape | Maintain",
