@@ -2,7 +2,7 @@ export const siteConfig = {
   businessName: "Outdoor Renovations",
   phone: "(512) 743-0570",
   phoneHref: "tel:+15127430570",
-  email: "Kstoutenger@outdoorreno.com",
+  email: "kstoutenger@gmail.com",
   address: {
     street: "1108 Hollybluff St",
     city: "Kyle",
@@ -38,7 +38,7 @@ export const siteConfig = {
   },
   reviewCount: "200+",
   averageRating: "5.0",
-  siteUrl: "https://outdoor-renovations.vercel.app",
+  siteUrl: "https://outdoorreno.com",
   gtmId: "[PLACEHOLDER]",
   motto: "Renovating Outdoor Dreams to Reality",
   tagline: "Design | Landscape | Maintain",

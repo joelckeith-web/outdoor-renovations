@@ -5,6 +5,12 @@ import { useForm } from "react-hook-form";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -17,6 +23,7 @@ interface ContactFormData {
 
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -24,11 +31,42 @@ export function ContactForm() {
   } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
-    // In production, this sends to a serverless function
-    console.log("Form data:", data);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
+    setSubmitError(null);
+
+    try {
+      const serviceLabel = data.service || "General Inquiry";
+      const timeframeText = data.timeframe ? ` | Timeframe: ${data.timeframe}` : "";
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          zipCode: data.zipCode,
+          message: `${data.message}${timeframeText}`,
+          service: serviceLabel,
+          leadSource: "contact-page",
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      window.dataLayer?.push({
+        event: "form_submission",
+        form_name: "contact-page",
+        form_service: serviceLabel,
+      });
+
+      setIsSubmitted(true);
+    } catch {
+      setSubmitError(
+        "Something went wrong. Please try again or call us directly."
+      );
+    }
   };
 
   return (
@@ -230,6 +268,12 @@ export function ContactForm() {
                       </p>
                     )}
                   </div>
+
+                  {submitError && (
+                    <p className="text-red-300 text-sm text-center font-body">
+                      {submitError}
+                    </p>
+                  )}
 
                   <button
                     type="submit"
