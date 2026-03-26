@@ -73,7 +73,7 @@ const benefits = [
     description:
       'From initial design consultation through final installation and ongoing maintenance — one team, one vision, one call.',
     image: '/images/owner-kyle.jpg',
-    objectPosition: 'center 20%',
+    objectPosition: 'center center',
   },
   {
     icon: Heart,
