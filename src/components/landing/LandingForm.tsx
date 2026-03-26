@@ -111,7 +111,7 @@ function LandingFormInner({
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div className="bg-primary px-6 py-4 text-center">
         <p className="text-white font-heading font-bold text-lg">
-          Get Your Free {serviceLabel} Consultation
+          Get Your {serviceLabel} Consultation
         </p>
         <p className="text-white/80 font-body text-sm mt-1">
           No obligation. Fast response.
@@ -200,7 +200,7 @@ function LandingFormInner({
           ) : (
             <>
               <Send className="w-5 h-5 mr-2" />
-              Get My Free Consultation
+              Get My Consultation
             </>
           )}
         </button>
@@ -208,7 +208,7 @@ function LandingFormInner({
         <div className="flex items-center justify-center gap-2 pt-1">
           <ShieldCheck className="w-4 h-4 text-green-600 shrink-0" />
           <p className="text-xs text-muted font-body">
-            100% free. No spam. Your info is private.
+            No spam. Your info is private.
           </p>
         </div>
       </form>
