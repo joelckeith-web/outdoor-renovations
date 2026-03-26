@@ -131,7 +131,7 @@ const serviceAreas = {
 const processSteps = [
   {
     step: '1',
-    title: 'Schedule Your Free Consultation',
+    title: 'Schedule Your Consultation',
     description:
       'Tell us about your vision. We will visit your property, discuss your goals, and provide an initial project scope.',
   },
@@ -263,18 +263,13 @@ export default function OutdoorRenovationLP() {
               </p>
 
               {/* Phone CTA */}
-              <div className="flex flex-col gap-1">
-                <span className="font-body text-sm text-gray-400 uppercase tracking-wide">
-                  Call to Discuss Your Project
-                </span>
-                <a
-                  href={siteConfig.phoneHref}
-                  className="inline-flex items-center gap-2 font-body font-bold text-xl text-primary-light hover:text-white transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  {siteConfig.phone}
-                </a>
-              </div>
+              <a
+                href={siteConfig.phoneHref}
+                className="inline-flex items-center gap-2 bg-white text-primary font-body font-bold text-lg px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors shadow-lg"
+              >
+                <Phone className="w-5 h-5" />
+                {siteConfig.phone}
+              </a>
             </div>
 
             {/* Right — Form */}
@@ -321,7 +316,7 @@ export default function OutdoorRenovationLP() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl overflow-hidden shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/15 transition-shadow"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -338,6 +333,35 @@ export default function OutdoorRenovationLP() {
                     {benefit.description}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== 3-STEP PROCESS ==================== */}
+      <section className="section-padding bg-primary-dark text-white">
+        <div className="container-narrow">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-4">
+              How It Works
+            </h2>
+            <p className="font-body text-gray-300 text-lg max-w-2xl mx-auto">
+              From your first call to your finished outdoor space — our process is simple,
+              transparent, and designed around you.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {processSteps.map((step) => (
+              <div key={step.step} className="text-center">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-body font-bold text-xl">{step.step}</span>
+                </div>
+                <h3 className="text-lg font-body font-bold text-white mb-2">{step.title}</h3>
+                <p className="text-gray-300 font-body text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -366,7 +390,7 @@ export default function OutdoorRenovationLP() {
               </ul>
               <div className="mt-8">
                 <ScrollToTopLink className="btn-primary">
-                  Get a Free Quote
+                  Get a Quote
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </ScrollToTopLink>
               </div>
@@ -509,35 +533,6 @@ export default function OutdoorRenovationLP() {
         </div>
       </section>
 
-      {/* ==================== 3-STEP PROCESS ==================== */}
-      <section className="section-padding bg-primary-dark text-white">
-        <div className="container-narrow">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-white mb-4">
-              How It Works
-            </h2>
-            <p className="font-body text-gray-300 text-lg max-w-2xl mx-auto">
-              From your first call to your finished outdoor space — our process is simple,
-              transparent, and designed around you.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {processSteps.map((step) => (
-              <div key={step.step} className="text-center">
-                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-body font-bold text-xl">{step.step}</span>
-                </div>
-                <h3 className="text-lg font-body font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300 font-body text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ==================== REVIEWS ==================== */}
       <section className="section-padding bg-white">
         <div className="container-narrow">
@@ -605,7 +600,7 @@ export default function OutdoorRenovationLP() {
 
           <a
             href={siteConfig.phoneHref}
-            className="inline-flex items-center gap-2 font-body font-bold text-2xl md:text-3xl text-primary-light hover:text-white transition-colors mb-8"
+            className="inline-flex items-center gap-2 bg-white text-primary font-body font-bold text-2xl md:text-3xl px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-colors shadow-lg mb-8"
           >
             <Phone className="h-6 w-6 md:h-7 md:w-7" />
             {siteConfig.phone}
@@ -613,11 +608,11 @@ export default function OutdoorRenovationLP() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <ScrollToTopLink className="btn-primary text-base px-8 py-3.5">
-              Get My Free Consultation
+              Get My Consultation
             </ScrollToTopLink>
             <a
               href={siteConfig.phoneHref}
-              className="btn-secondary border-white text-white hover:bg-white hover:text-dark text-base px-8 py-3.5"
+              className="inline-flex items-center gap-2 bg-primary text-white font-body font-bold text-base px-8 py-3.5 rounded-lg hover:bg-white hover:text-primary transition-colors"
             >
               Call Now
             </a>
